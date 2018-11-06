@@ -12,15 +12,15 @@ exports.infoOS = function() {
                 else if (type === 'Windows_NT') {
                     type = 'Windows';
                 }
-                console.log('System: ', type);
-                console.log('Release: ', release);
+                console.log('System: '.grey, type);
+                console.log('Release: '.red, release);
                 var cpu = os.cpus()[0].model;
-                console.log('CPU model: ', cpu);
+                console.log('CPU model: '.blue, cpu);
                 info.pokazCzas();
                 var arch=os.arch ();
-                console.log(arch);
+                console.log(arch.yellow);
                 var userInfo = os.userInfo();
-                console.log('User name: ', userInfo.username);
-                console.log('Home dir: ', userInfo.homedir);
+                console.log('User name: ', userInfo.username.magenta);
+                console.log('Home dir: ', userInfo.homedir.cyan);
 
 };
